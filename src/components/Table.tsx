@@ -88,7 +88,7 @@ function TreeTable({ groupedData }: { groupedData: any }) {
                                 </tr>
 
 
-                                {isParentOpen && Object.entries(categories).map(([category, items]) => {
+                                 {isParentOpen && Object.entries(categories).map(([category, items]) => {
                                     const categoryKey = `${parent}-${category}`;
                                     const isCategoryOpen = openCategories[categoryKey];
                                     const categoryTotals = calculateTotals(items);

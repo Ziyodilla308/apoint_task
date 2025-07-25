@@ -5,7 +5,7 @@ import { groupByParentCategory } from '../../utils/groupData';
 import Table from '../../components/Table';
 
 function Dashboard() {
-    const [data, setData] = useState<any[]>([]);
+    const [data, setData] = useState<unknown[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
