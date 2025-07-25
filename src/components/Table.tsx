@@ -8,7 +8,7 @@ const keys = [
     'remind_start_amount', 'remind_start_sum',
 ];
 
-function calculateTotals(data: any[]) {
+function calculateTotals(data: unknown[]) {
     const totals: Record<string, number> = {};
     keys.forEach(k => totals[k] = 0);
     for (const item of data) {
@@ -35,8 +35,8 @@ function TreeTable({ groupedData }: { groupedData: any }) {
         setOpenCategories(prev => ({ ...prev, [key]: !prev[key] }));
     };
 
-    const allItems: any[] = Object.values(groupedData)
-        .flatMap((cat: any) => Object.values(cat).flat());
+    const allItems: unknown[] = Object.values(groupedData)
+        .flatMap((cat: unknown) => Object.values(cat).flat());
 
     const grandTotal = calculateTotals(allItems);
 
