@@ -1,7 +1,7 @@
-import type {ICategory} from "../types/category.ts";
+import type {GroupedData, TreeItem} from "../types/table.ts";
 
-export const groupByParentCategory = (data: ICategory[]) => {
-    const result: Record<string, Record<string, ICategory[]>> = {};
+export const groupByParentCategory = (data: TreeItem[]): GroupedData => {
+    const result: GroupedData = {};
     for (const item of data) {
         const { parent, category } = item;
         if (!result[parent]) result[parent] = {};

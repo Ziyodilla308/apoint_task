@@ -1,5 +1,7 @@
 export interface TreeItem {
     id: string | number;
+    parent: string;
+    category: string;
     material_id?: string | number;
     name: string;
     remind_end_amount: number;

@@ -1,5 +1,6 @@
 import { useState, Fragment } from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
+import type {TreeItem} from "../types/table.ts";
 
 const keys = [
     "remind_end_amount",
@@ -13,13 +14,6 @@ const keys = [
 ] as const;
 
 type Key = typeof keys[number];
-
-interface TreeItem {
-    id: string | number;
-    material_id?: string | number;
-    name: string;
-    [key: string]: string | number | undefined;
-}
 
 type CategoryGroup = Record<string, TreeItem[]>;
 type GroupedData = Record<string, CategoryGroup>;

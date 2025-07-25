@@ -3,9 +3,10 @@ import { fetchMaterials } from "../../services/api";
 import { getMonthRange } from "../../utils/dateUtils";
 import { groupByParentCategory } from "../../utils/groupData";
 import Table from "../../components/Table";
+import type {GroupedData, TreeItem} from "../../types/table.ts";
 
 function Dashboard() {
-    const [data, setData] = useState<unknown[]>([]);
+    const [data, setData] = useState<TreeItem[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -20,7 +21,7 @@ function Dashboard() {
 
     if (loading) return <div>Loading...</div>;
 
-    const grouped = groupByParentCategory(data);
+    const grouped: GroupedData = groupByParentCategory(data);
 
     return (
         <div>
