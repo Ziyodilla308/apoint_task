@@ -12,5 +12,5 @@ export interface TreeItem {
     remind_start_sum: number;
 }
 
-export type CategoryGroup = Record<string, TreeItem[]>; // category: [items]
-export type GroupedData = Record<string, CategoryGroup>; // parent: { category: [items] }
+export type CategoryGroup = Record<string, TreeItem[]>;
+export type GroupedData = Record<string, CategoryGroup>;
