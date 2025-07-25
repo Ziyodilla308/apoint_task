@@ -1,4 +1,4 @@
-import { useAuth } from '../auth/useAuth';
+import { useAuth } from "../auth/useAuth";
 
 const Navbar = () => {
     const { logout, user } = useAuth();

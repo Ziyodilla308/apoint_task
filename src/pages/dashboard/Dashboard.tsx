@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import { fetchMaterials } from '../../services/api';
-import { getMonthRange } from '../../utils/dateUtils';
-import { groupByParentCategory } from '../../utils/groupData';
-import Table from '../../components/Table';
+import { useEffect, useState } from "react";
+import { fetchMaterials } from "../../services/api";
+import { getMonthRange } from "../../utils/dateUtils";
+import { groupByParentCategory } from "../../utils/groupData";
+import Table from "../../components/Table";
 
 function Dashboard() {
     const [data, setData] = useState<unknown[]>([]);
