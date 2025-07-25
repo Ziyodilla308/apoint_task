@@ -1,5 +1,7 @@
-export const groupByParentCategory = (data: any[]) => {
-    const result: Record<string, Record<string, any[]>> = {};
+import type {ICategory} from "../types/category.ts";
+
+export const groupByParentCategory = (data: ICategory[]) => {
+    const result: Record<string, Record<string, ICategory[]>> = {};
     for (const item of data) {
         const { parent, category } = item;
         if (!result[parent]) result[parent] = {};
